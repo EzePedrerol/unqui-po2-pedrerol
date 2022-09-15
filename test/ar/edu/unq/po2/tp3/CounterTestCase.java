@@ -31,7 +31,7 @@ class CounterTestCase {
 	counter.addNumber(4);
 	}
 	/**
-	* Verifica la cantidad de pares
+	* Verifica la cantidad de pares 
 	*/
 	@Test
 	public void testEvenNumbers() {

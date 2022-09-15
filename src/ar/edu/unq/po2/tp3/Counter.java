@@ -36,7 +36,7 @@ public class Counter {
 		
 		return impares;
 	}
-	
+	 
 	public int cantidadDeMultiplosDe(int n) {
 		int multiplos = 0;
 		
