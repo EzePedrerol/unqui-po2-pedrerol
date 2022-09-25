@@ -2,13 +2,24 @@ package ar.edu.unq.po2.tp4;
 
 public class ProductoPrimeraNecesidad extends Producto{
 
-	public ProductoPrimeraNecesidad(String nombre, double precio, boolean precioCuidado) {
+	private double descuento;
+	
+	public ProductoPrimeraNecesidad(String nombre, double precio, boolean precioCuidado, double descuento) {
 		super(nombre, precio, precioCuidado);
-		// TODO Auto-generated constructor stub
+		this.descuento = descuento;
+	}
+	
+	public double getDescuento() {
+		return this.descuento;
+	}
+	
+
+	public double descuentoCalculado() {
+		return (this.getDescuento()*this.getPrecio())/100;
 	}
 	
 	public double calcularPrecio() {
-		return (this.getPrecio() * 0.1);
+		return (this.getPrecio() - this.descuentoCalculado());
 	}
 	
 }
